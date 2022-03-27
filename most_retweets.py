@@ -12,4 +12,5 @@ def top_retweets(tweetfile, x):
     # convert to list
     tweets = dict(sorted(tweets.items(), key=lambda item: item[1], reverse=True))
     top = list(tweets.keys())[0:x]
-    return top
+    values = list(tweets.values())[0:x]
+    return top, values
