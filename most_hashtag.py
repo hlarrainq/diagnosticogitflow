@@ -19,8 +19,5 @@ def top_hashtag(tweetfile, x):
     # convert to list
     hashtags = dict(sorted(hashtags.items(), key=lambda item: item[1], reverse=True))
     top = list(hashtags.keys())[0:x]
-    for t in top:
-        print(t, hashtags[t])
-    return top
-
-top_hashtag('db.json', 10)
+    values = list(hashtags.values())[0:x]
+    return top, values
